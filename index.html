@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abu Bakar Siddique - Computer Science student, developer, and researcher." />
+  <meta property="og:title" content="Abu Bakar Siddique | CS Portfolio" />
+  <meta property="og:description" content="Computer Science student focused on software, AI, and research." />
+  <meta property="og:type" content="website" />
+  <title>Abu Bakar Siddique | CS Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <span class="grid-sheen"></span>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <nav class="nav" id="nav">
+    <a href="#home" class="logo">ABS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#freelance" class="nav-link">Freelance</a>
+      <a href="#activities" class="nav-link">Activities</a>
+      <a href="#awards" class="nav-link">Awards</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#moments" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="assets/resume.pdf" class="nav-cta" download>Download CV</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Computer Science Student</p>
+          <h1 class="hero-title">Abu Bakar <span>Siddique</span></h1>
+          <p class="hero-subtitle">
+            BSc Computer Science and Technology at UESTC. I build practical software,
+            explore AI-assisted education, and ship projects that make learning smarter.
+          </p>
+          <div class="hero-roles">
+            <span class="mono">Focus:</span>
+            <span id="typewriter" data-roles="CS student|Software developer|AI researcher|Freelancer"></span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View projects</a>
+            <a href="#contact" class="btn ghost">Get in touch</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge-pill"><i class="fa-solid fa-graduation-cap"></i> UESTC 2023-2027</span>
+            <span class="badge-pill"><i class="fa-solid fa-award"></i> SCSE awards</span>
+            <span class="badge-pill"><i class="fa-solid fa-flask"></i> Journal + Conference</span>
+          </div>
+          <div class="section-band">
+            <span>AI Education</span>
+            <span>Mobile Apps</span>
+            <span>Web Development</span>
+            <span>Research</span>
+          </div>
+        </div>
+        <div class="hero-card tilt" data-tilt>
+          <div class="card-layer card-glow"></div>
+          <div class="card-layer card-content">
+            <img src="assets/profile.jpg" alt="Portrait of Abu Bakar Siddique" />
+            <div class="card-body">
+              <h3>Abu Bakar Siddique</h3>
+              <p>CS student, UESTC</p>
+              <div class="card-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Web</span>
+                <span class="tag">Research</span>
+              </div>
+              <div class="card-actions">
+                <a href="assets/resume.pdf" class="btn small" download>Download CV</a>
+                <a href="#freelance" class="btn small ghost">Freelance profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section theme-forest">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">A student who ships real work.</h2>
+          <p class="section-subtitle">
+            I am a Computer Science and Technology student at the University of Electronic Science
+            and Technology of China (UESTC). I build products that connect AI and education and I
+            freelance on Upwork, delivering real-world software for global clients.
+          </p>
+          <p>
+            My focus spans Artificial Intelligence, Web and Mobile Development, Cloud Computing,
+            and Cybersecurity. I have built a Chinese learning app, an AI-powered classroom system,
+            a physics learning game, and multiple web projects.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <h3>Academic awards</h3>
+              <p>Third prize in year one and second prize in SCSE in year two.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Research</h3>
+              <p>Published one journal paper and presented one conference paper.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-facts">
+          <div class="fact-card">
+            <span class="mono">Degree</span>
+            <p>BSc Computer Science and Technology</p>
+          </div>
+          <div class="fact-card">
+            <span class="mono">Nationality</span>
+            <p>Bangladesh</p>
+          </div>
+          <div class="fact-card">
+            <span class="mono">School</span>
+            <p>School of Computer Science and Engineering</p>
+          </div>
+          <div class="fact-card">
+            <span class="mono">Email</span>
+            <p>abs2003.edu@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section theme-sage">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Research</p>
+          <h2 class="section-title">Academic work and publications</h2>
+          <p class="section-subtitle">
+            My research explores AI-assisted education and learning analytics. Full details and
+            slides are available on request.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <article class="card tilt" data-tilt>
+            <div class="card-top">
+              <span class="chip">Journal</span>
+              <span class="chip ghost">Published</span>
+            </div>
+            <div class="card-body">
+              <h3>AI-assisted learning management systems</h3>
+              <p>
+                Published journal paper focused on smart classroom workflows and learner feedback.
+              </p>
+              <div class="card-links">
+                <a href="assets/journal-paper.pdf" class="link">View PDF</a>
+                <a href="#contact" class="link">Request details</a>
+              </div>
+            </div>
+          </article>
+          <article class="card tilt" data-tilt>
+            <div class="card-top">
+              <span class="chip">Conference</span>
+              <span class="chip ghost">Presented</span>
+            </div>
+            <div class="card-body">
+              <h3>Learning analytics for interactive education</h3>
+              <p>
+                Conference paper on how AI personalizes learning paths for students.
+              </p>
+              <div class="card-links">
+                <a href="assets/conference-paper.pdf" class="link">View PDF</a>
+                <a href="#contact" class="link">Collaborate</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section theme-cream">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section-title">Selected builds</h2>
+          <p class="section-subtitle">
+            A focused set of projects across education, AI, and student productivity.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <article class="project-card tilt" data-tilt>
+            <img src="assets/project-chinese-1.png" alt="Chinese Learning App" />
+            <div class="card-body">
+              <h3>Chinese Learning App</h3>
+              <p>
+                Interactive Android app for language learning with gamified lessons and quizzes.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Android</span>
+                <span class="tag">Education</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt" data-tilt>
+            <img src="assets/project-chinese-2.png" alt="Chinese Learning App lessons" />
+            <div class="card-body">
+              <h3>Chinese Learning App UI</h3>
+              <p>
+                Lesson flows, progress tracking, and daily practice experience.
+              </p>
+              <div class="tag-row">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">SQLite</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt" data-tilt>
+            <img src="assets/project-disease.png" alt="Smart Disease Predictor" />
+            <div class="card-body">
+              <h3>Smart Disease Predictor</h3>
+              <p>
+                Data-driven health prediction tool using ML workflows and diagnostic insights.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">Healthcare</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt" data-tilt>
+            <img src="assets/project-study-buddy.png" alt="Study Buddy Mobile App" />
+            <div class="card-body">
+              <h3>Study Buddy Mobile App</h3>
+              <p>
+                Student productivity app for schedule planning, reminders, and focus sessions.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Mobile</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">Productivity</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt" data-tilt>
+            <div class="project-visual">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="card-body">
+              <h3>Learn Physics by Game</h3>
+              <p>
+                Educational game that teaches physics concepts with interactive simulations.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Game Dev</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt" data-tilt>
+            <div class="project-visual">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="card-body">
+              <h3>Web Development Projects</h3>
+              <p>
+                Responsive websites and dashboards built for clients and university work.
+              </p>
+              <div class="tag-row">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section theme-clay">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title">Work and leadership</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 - Present</div>
+            <div class="timeline-content">
+              <h3>Freelance Developer, Upwork</h3>
+              <p>Delivered web and mobile projects for international clients.</p>
+              <div class="tag-row">
+                <span class="tag">Client work</span>
+                <span class="tag">Web</span>
+                <span class="tag">Apps</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>Campus Ambassador, BCYSA</h3>
+              <p>Represented UESTC at Bangladesh China Youth Student Association events.</p>
+              <div class="tag-row">
+                <span class="tag">Leadership</span>
+                <span class="tag">Community</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Aug 2025</div>
+            <div class="timeline-content">
+              <h3>International Student Orientation Volunteer</h3>
+              <p>Supported incoming students during onboarding at UESTC.</p>
+              <div class="tag-row">
+                <span class="tag">Volunteer</span>
+                <span class="tag">ISO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section theme-cream">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section-title">Core toolbox</h2>
+          <p class="section-subtitle">
+            A balanced mix of programming, cloud, AI, and security skills.
+          </p>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <p>Python, Java, C++, C#, JavaScript, Kotlin</p>
+          </div>
+          <div class="skill-card">
+            <h3>Web</h3>
+            <p>HTML, CSS, React, Angular, Vue.js</p>
+          </div>
+          <div class="skill-card">
+            <h3>AI and ML</h3>
+            <p>TensorFlow, PyTorch, NLP, Neural Networks</p>
+          </div>
+          <div class="skill-card">
+            <h3>Cloud and Data</h3>
+            <p>AWS, Azure, Google Cloud, SQL, MongoDB, Cassandra</p>
+          </div>
+          <div class="skill-card">
+            <h3>Security</h3>
+            <p>Cybersecurity, penetration testing, vulnerability assessment</p>
+          </div>
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <p>Photoshop, MS Office, SEO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="freelance" class="section theme-sage">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Freelancing</p>
+          <h2 class="section-title">Freelancing profile and services</h2>
+          <p class="section-subtitle">
+            A dedicated page with my full freelance profile, services, and client workflow.
+          </p>
+        </div>
+        <div class="freelance-grid">
+          <div class="freelance-card">
+            <h3>What I offer</h3>
+            <p>Product sourcing, supplier research, quality checks, and logistics coordination.</p>
+          </div>
+          <div class="freelance-card">
+            <h3>Client outcomes</h3>
+            <p>Supplier matching, price negotiation, and delivery readiness for global clients.</p>
+          </div>
+          <div class="freelance-card">
+            <h3>Full profile</h3>
+            <p>Explore the complete freelance profile and services in a standalone page.</p>
+            <a class="link" href="freelancing.html">Open freelance profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="section theme-cream">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Activities</p>
+          <h2 class="section-title">Campus and community</h2>
+        </div>
+        <div class="activity-grid">
+          <div class="activity-card">
+            <h3>Campus Ambassador</h3>
+            <p>BCYSA representative at UESTC. Link: bcysa.org/member-details/3228</p>
+          </div>
+          <div class="activity-card">
+            <h3>International Cultural Festival</h3>
+            <p>Participant in UESTC ISO cultural events.</p>
+          </div>
+          <div class="activity-card">
+            <h3>58th Sports Day</h3>
+            <p>Student athlete and event volunteer.</p>
+          </div>
+          <div class="activity-card">
+            <h3>Chinese Character Writing</h3>
+            <p>Competition hosted by the School of Foreign Languages.</p>
+          </div>
+          <div class="activity-card">
+            <h3>Campus Photography</h3>
+            <p>International Student Campus Photography showcase.</p>
+          </div>
+          <div class="activity-card">
+            <h3>Freshmen Orientation Volunteer</h3>
+            <p>Supported international student onboarding (Aug 26-30, 2025).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="section theme-sage">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Awards</p>
+          <h2 class="section-title">Honours and achievements</h2>
+        </div>
+        <div class="award-grid">
+          <div class="award-card">
+            <h3>National Science Olympiad</h3>
+            <p>2nd place, 41st National Science Olympiad (2019), Ashuganj Upazila.</p>
+          </div>
+          <div class="award-card">
+            <h3>Bangladesh Shishu Academy</h3>
+            <p>3rd place in quiz competition and debate competition (2018).</p>
+          </div>
+          <div class="award-card">
+            <h3>Bishwo Shahitto Kendra Award</h3>
+            <p>Recognized for contribution to literature and learning.</p>
+          </div>
+          <div class="award-card">
+            <h3>UESTC Academic Prizes</h3>
+            <p>Third prize in year one, second prize in year two at SCSE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section theme-cream">
+      <div class="container resume-grid">
+        <div>
+          <p class="eyebrow">Resume</p>
+          <h2 class="section-title">Downloadable CV and highlights</h2>
+          <p class="section-subtitle">
+            Download the latest CV or open the quick preview below.
+          </p>
+          <div class="resume-actions">
+            <a href="assets/resume.pdf" class="btn primary" download>Download CV</a>
+            <a href="assets/resume.pdf" class="btn ghost" target="_blank">Open PDF</a>
+          </div>
+        </div>
+        <div class="resume-card tilt" data-tilt>
+          <h3>Education</h3>
+          <ul>
+            <li>BSc Computer Science and Technology, UESTC (2023-2027)</li>
+            <li>Higher Secondary Certificate, GPA 5.00 / 5.00</li>
+            <li>Secondary School Certificate, GPA 4.89 / 5.00</li>
+          </ul>
+          <h3>Research</h3>
+          <ul>
+            <li>1 journal paper (published)</li>
+            <li>1 conference paper (presented)</li>
+          </ul>
+          <h3>Languages</h3>
+          <ul>
+            <li>English (IELTS 7.0)</li>
+            <li>Bangla (native)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section theme-sage">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Blog and notes</p>
+          <h2 class="section-title">Writing and reflections</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card tilt is-clickable" data-tilt>
+            <a class="card-link" href="blog/blog-1.html" aria-label="Read: Beginner guide to CS research"></a>
+            <div class="card-body">
+              <h3>Beginner guide to CS research</h3>
+              <p>Practical answers to the questions new researchers ask most.</p>
+            </div>
+          </article>
+          <article class="card tilt is-clickable" data-tilt>
+            <a class="card-link" href="blog/blog-2.html" aria-label="Read: The Untold AI Race"></a>
+            <div class="card-body">
+              <h3>The Untold AI Race</h3>
+              <p>DeepMind, AlphaFold, and the race that reshaped AI.</p>
+            </div>
+          </article>
+          <article class="card tilt is-clickable" data-tilt>
+            <a class="card-link" href="blog/blog-3.html" aria-label="Read: Consciousness is Fundamental"></a>
+            <div class="card-body">
+              <h3>Consciousness is Fundamental</h3>
+              <p>Reflections on Federico Faggin and quantum consciousness.</p>
+            </div>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="blog/index.html" class="btn ghost">View all posts</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="moments" class="section theme-cream">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Life beyond code</p>
+          <h2 class="section-title">Stories and travels</h2>
+        </div>
+        <div class="moment-grid">
+          <article class="moment-card tilt" data-tilt>
+            <div class="moment-header">
+              <img src="assets/profile.jpg" alt="Profile" />
+              <div>
+                <h3>Chongqing</h3>
+                <p>Night city lights</p>
+              </div>
+            </div>
+            <img class="moment-media" src="assets/Chongqing.jpg" alt="Chongqing" />
+            <p class="moment-text">Exploring the city skyline and river views.</p>
+            <div class="moment-actions">
+              <span><i class="fa-regular fa-thumbs-up"></i> 48</span>
+              <span><i class="fa-regular fa-comment"></i> 7</span>
+              <span><i class="fa-solid fa-share"></i> 3</span>
+            </div>
+          </article>
+          <article class="moment-card tilt" data-tilt>
+            <div class="moment-header">
+              <img src="assets/profile.jpg" alt="Profile" />
+              <div>
+                <h3>Winter in China</h3>
+                <p>Snow and calm</p>
+              </div>
+            </div>
+            <img class="moment-media" src="assets/Winter in china.jpg" alt="Winter in China" />
+            <p class="moment-text">Quiet mornings and winter walks.</p>
+            <div class="moment-actions">
+              <span><i class="fa-regular fa-thumbs-up"></i> 63</span>
+              <span><i class="fa-regular fa-comment"></i> 11</span>
+              <span><i class="fa-solid fa-share"></i> 4</span>
+            </div>
+          </article>
+          <article class="moment-card tilt" data-tilt>
+            <div class="moment-header">
+              <img src="assets/profile.jpg" alt="Profile" />
+              <div>
+                <h3>With Friends</h3>
+                <p>Campus memories</p>
+              </div>
+            </div>
+            <img class="moment-media" src="assets/With friends.png" alt="With friends" />
+            <p class="moment-text">Celebrating milestones together.</p>
+            <div class="moment-actions">
+              <span><i class="fa-regular fa-thumbs-up"></i> 35</span>
+              <span><i class="fa-regular fa-comment"></i> 4</span>
+              <span><i class="fa-solid fa-share"></i> 2</span>
+            </div>
+          </article>
+          <article class="moment-card tilt" data-tilt>
+            <div class="moment-header">
+              <img src="assets/profile.jpg" alt="Profile" />
+              <div>
+                <h3>Xiling Mountain</h3>
+                <p>Defu trail</p>
+              </div>
+            </div>
+            <img class="moment-media" src="assets/Xiling mountain defu.jpg" alt="Xiling mountain" />
+            <p class="moment-text">A hike through the mountains and fresh air.</p>
+            <div class="moment-actions">
+              <span><i class="fa-regular fa-thumbs-up"></i> 22</span>
+              <span><i class="fa-regular fa-comment"></i> 3</span>
+              <span><i class="fa-solid fa-share"></i> 1</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section theme-ink">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 class="section-title">Lets connect</h2>
+          <p class="section-subtitle">
+            I am open to research collaborations, internships, and freelance projects.
+            Use the form or email me directly.
+          </p>
+          <div class="contact-list">
+            <a href="mailto:abs2003.edu@gmail.com">
+              <i class="fa-solid fa-envelope"></i> abs2003.edu@gmail.com
+            </a>
+            <a href="mailto:abubakarsiddique@std.uestc.edu.cn">
+              <i class="fa-solid fa-envelope-open-text"></i> abubakarsiddique@std.uestc.edu.cn
+            </a>
+            <a href="https://www.linkedin.com/in/engr-abubakar-siddique" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> linkedin.com/in/engr-abubakar-siddique
+            </a>
+            <a href="https://github.com/abubakarsiddique360" target="_blank">
+              <i class="fa-brands fa-github"></i> github.com/abubakarsiddique360
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Subject
+            <input type="text" name="subject" placeholder="Project, research, or collaboration" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="Tell me about your idea" required></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">ABS</a>
+        <p>Professional portfolio for a CS student and researcher.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="assets/resume.pdf" download>Download CV</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="https://github.com/abubakarsiddique360" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright <span id="year"></span> Abu Bakar Siddique</span>
+      <span>Built for clarity and depth</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
