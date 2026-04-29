@@ -3,193 +3,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Freelancing Profile | Abu Bakar Siddique</title>
+  <title>Freelance Services · Abu Bakar Siddique</title>
+  <meta name="description" content="Professional freelance services: Web Development, AI & Automation, UI/UX Design by Abu Bakar Siddique." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .freelance-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; position: relative; overflow: hidden; }
+    .freelance-hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .freelance-hero-content { position: relative; z-index: 1; }
+    .freelance-hero-content h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); color: var(--primary); margin-bottom: 0.5rem; }
+    .freelance-hero-content p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .service-detail { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .service-detail h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); margin: 2rem 0 1rem; }
+    .service-detail h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .service-detail p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .service-detail ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .service-detail ul li { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 0.3rem; }
+    .pricing-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; transition: var(--transition); }
+    .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--accent); }
+    .pricing-card h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .pricing-card .price { font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0; }
+    .pricing-card .price span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
+    .pricing-card ul { list-style: none; padding: 0; margin: 1rem 0; }
+    .pricing-card ul li { padding: 0.4rem 0; color: var(--text-muted); font-size: 0.9rem; }
+    .pricing-card ul li i { color: var(--accent); margin-right: 0.5rem; }
+  </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <nav class="nav" id="nav">
-    <a href="index.html" class="logo">ABS</a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#home" class="nav-link">Home</a>
-      <a href="index.html#freelance" class="nav-link">Freelance</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html" class="logo"><i class="fas fa-terminal"></i> ABS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#research" class="nav-link">Research</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#freelance" class="nav-link active">Freelance</a>
+      <a href="../index.html#activities" class="nav-link">Activities</a>
+      <a href="../index.html#awards" class="nav-link">Awards</a>
+      <a href="../index.html#resume" class="nav-link">Resume</a>
+      <a href="../blog/index.html" class="nav-link">Blog</a>
+      <a href="../index.html#moments" class="nav-link">Moments</a>
+      <a href="../index.html#contact" class="nav-link nav-cta"><i class="fas fa-paper-plane"></i> Contact</a>
     </div>
-    <a href="assets/resume.pdf" class="nav-cta" download>Download CV</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <main>
-    <section class="section theme-forest" style="padding-top: 8rem;">
-      <div class="container hero-grid">
+  <section class="freelance-hero">
+    <div class="freelance-hero-bg" id="freelanceHeroBg"></div>
+    <div class="freelance-hero-content">
+      <h1>🤝 Freelance Services</h1>
+      <p>Professional web development, AI automation, and UI/UX design services for businesses and individuals worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-bar">
+        <span class="section-number">01</span>
+        <span class="section-label">What I Offer</span>
+        <span class="section-line"></span>
+      </div>
+      <div class="freelance-grid">
+        <div class="freelance-card fade-in">
+          <h3><i class="fas fa-globe"></i> Web Development</h3>
+          <p>Custom websites, single-page applications, dashboards, e-commerce platforms, and landing pages built with modern technologies.</p>
+          <div class="tag-row" style="margin-top:1rem">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="freelance-card fade-in">
+          <h3><i class="fas fa-robot"></i> AI & Automation</h3>
+          <p>Intelligent chatbots, data pipelines, NLP tools, web scraping, and process automation to streamline your business.</p>
+          <div class="tag-row" style="margin-top:1rem">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+        <div class="freelance-card fade-in">
+          <h3><i class="fas fa-paint-brush"></i> UI/UX Design</h3>
+          <p>Clean, responsive, and accessible interfaces designed with a focus on user experience and modern design principles.</p>
+          <div class="tag-row" style="margin-top:1rem">
+            <span class="tag">Figma</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">Accessible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section theme-warm">
+    <div class="container">
+      <div class="section-header-bar">
+        <span class="section-number">02</span>
+        <span class="section-label">Pricing</span>
+        <span class="section-line"></span>
+      </div>
+      <div class="freelance-grid">
+        <div class="pricing-card fade-in">
+          <h3>Starter</h3>
+          <div class="price">$299 <span>/ project</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> Single-page website</li>
+            <li><i class="fas fa-check"></i> Responsive design</li>
+            <li><i class="fas fa-check"></i> Basic SEO</li>
+            <li><i class="fas fa-check"></i> 2 revisions</li>
+          </ul>
+          <a href="../index.html#contact" class="btn primary small">Get Started</a>
+        </div>
+        <div class="pricing-card fade-in">
+          <h3>Professional</h3>
+          <div class="price">$999 <span>/ project</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> Multi-page web app</li>
+            <li><i class="fas fa-check"></i> Custom backend API</li>
+            <li><i class="fas fa-check"></i> Database integration</li>
+            <li><i class="fas fa-check"></i> 5 revisions</li>
+          </ul>
+          <a href="../index.html#contact" class="btn primary small">Get Started</a>
+        </div>
+        <div class="pricing-card fade-in">
+          <h3>Enterprise</h3>
+          <div class="price">$2,499+ <span>/ project</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> Full-stack application</li>
+            <li><i class="fas fa-check"></i> AI/ML integration</li>
+            <li><i class="fas fa-check"></i> Cloud deployment</li>
+            <li><i class="fas fa-check"></i> Unlimited revisions</li>
+          </ul>
+          <a href="../index.html#contact" class="btn primary small">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-bar">
+        <span class="section-number">03</span>
+        <span class="section-label">My Process</span>
+        <span class="section-line"></span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">Step 1</div>
+          <div class="timeline-content">
+            <h3>Discovery Call</h3>
+            <p>We discuss your project goals, requirements, and timeline.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">Step 2</div>
+          <div class="timeline-content">
+            <h3>Proposal & Agreement</h3>
+            <p>I provide a detailed proposal with scope, timeline, and pricing.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">Step 3</div>
+          <div class="timeline-content">
+            <h3>Development</h3>
+            <p>I build your project with regular updates and feedback loops.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">Step 4</div>
+          <div class="timeline-content">
+            <h3>Delivery & Support</h3>
+            <p>I deliver the final product and provide post-launch support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section theme-warm" style="text-align:center">
+    <div class="container">
+      <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--primary);margin-bottom:1rem">Ready to Start Your Project?</h2>
+      <p style="color:var(--text-muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">Let's bring your ideas to life. Get in touch for a free consultation.</p>
+      <a href="../index.html#contact" class="btn primary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      <a href="Freelancing%20profile.html" class="btn ghost" style="margin-left:1rem"><i class="fas fa-user-tie"></i> View My Profile</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
         <div>
-          <p class="eyebrow">Freelancing profile</p>
-          <h1 class="section-title">China sourcing and supply chain support</h1>
-          <p class="section-subtitle">
-            3+ years of sourcing, quality control, and logistics coordination for global clients.
-          </p>
-          <div class="hero-badges">
-            <span class="badge-pill"><i class="fa-solid fa-check"></i> Verified supplier</span>
-            <span class="badge-pill"><i class="fa-solid fa-star"></i> Top rated</span>
-            <span class="badge-pill"><i class="fa-solid fa-globe"></i> Global network</span>
-          </div>
+          <div class="logo"><i class="fas fa-terminal"></i> ABS</div>
+          <p>Researcher · Developer · Freelancer · 中文 (HSK4)</p>
         </div>
-        <div class="hero-card tilt" data-tilt>
-          <div class="card-layer card-glow"></div>
-          <div class="card-layer card-content">
-            <img src="assets/profile.jpg" alt="Abu Bakar Siddique" />
-            <div class="card-body">
-              <h3>Abu Bakar Siddique</h3>
-              <p>China sourcing agent | Alibaba 1688 expert</p>
-              <div class="card-tags">
-                <span class="tag">Sourcing</span>
-                <span class="tag">QC</span>
-                <span class="tag">Logistics</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section theme-cream">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Overview</p>
-          <h2 class="section-title">Why work with me</h2>
-          <p class="section-subtitle">
-            I act as your eyes and ears in China, helping you source quality products at competitive prices.
-          </p>
-        </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-body">
-              <h3>Proven track record</h3>
-              <p>Assisted clients exporting over $500k worth of goods annually.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Reliable expertise</h3>
-              <p>Experienced with Amazon FBA, Shopify dropshipping, and ecommerce sourcing.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Client centered</h3>
-              <p>I focus on transparency, quality control, and on-time delivery.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section theme-sage">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2 class="section-title">What I deliver</h2>
-        </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-body">
-              <h3>Product sourcing</h3>
-              <p>Alibaba, 1688, Taobao sourcing and supplier discovery.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Supplier vetting</h3>
-              <p>Price comparison, factory checks, and supplier validation.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Quality control</h3>
-              <p>Sample collection, inspection, and production monitoring.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Logistics</h3>
-              <p>Freight coordination, shipping, and delivery readiness.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section theme-cream">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2 class="section-title">Work highlights</h2>
-        </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-body">
-              <h3>Virtual Assistant | MJA</h3>
-              <p>May 2019 to May 2021</p>
-              <p>Supported sourcing operations, supplier coordination, and documentation.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>Alibaba sourcing project</h3>
-              <p>Found a manufacturing partner for an American client and delivered on price and quality.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section theme-sage">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Testimonials</p>
-          <h2 class="section-title">Client feedback</h2>
-        </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-body">
-              <h3>Sarah Chen</h3>
-              <p>CEO, EcoHome Living</p>
-              <p>Working with Abu Bakar transformed our supply chain. Highly recommended.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <h3>James Wilson</h3>
-              <p>Founder, TrendyGadgets Inc.</p>
-              <p>Their attention to detail in quality control saved us thousands in returns.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section theme-cream">
-      <div class="container contact-grid">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2 class="section-title">Lets work together</h2>
-          <p class="section-subtitle">
-            Contact me to discuss sourcing needs and get the best deals from China.
-          </p>
-          <div class="contact-list">
-            <a href="mailto:abs2003.edu@gmail.com"><i class="fa-solid fa-envelope"></i> abs2003.edu@gmail.com</a>
-            <a href="https://www.linkedin.com/in/engr-abubakar-siddique" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/engr-abubakar-siddique</a>
-            <a href="tel:+8619141386684"><i class="fa-solid fa-phone"></i> +86 191 4138 6684</a>
-          </div>
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../blog/index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="freelancing.html">Web Development</a>
+          <a href="freelancing.html">AI & Automation</a>
+          <a href="freelancing.html">UI/UX Design</a>
+          <a href="Freelancing%20profile.html">Freelance Profile</a>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Abu Bakar Siddique</span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--accent)"></i></span>
+      </div>
+    </div>
+  </footer>
 
-  <script src="js/main.js"></script>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Floating dots
+    const heroBg = document.getElementById('freelanceHeroBg');
+    if (heroBg) {
+      for (let i = 0; i < 15; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'client-dot-pulse';
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.top = Math.random() * 100 + '%';
+        dot.style.setProperty('--delay', (Math.random() * 3) + 's');
+        heroBg.appendChild(dot);
+      }
+    }
+  </script>
 </body>
 </html>

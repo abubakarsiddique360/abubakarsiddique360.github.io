@@ -3,133 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Beginner Guide to Research in Computer Science | Abu Bakar Siddique</title>
+  <title>The Untold AI Race · Blog</title>
+  <meta name="description" content="From AlphaGo to AlphaFold — how DeepMind pioneered the AI revolution and solved a 50-year-old scientific problem." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-hero { min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; position: relative; overflow: hidden; background: var(--bg-2); }
+    .blog-hero-content { position: relative; z-index: 1; }
+    .blog-hero-content h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-hero-content .meta { color: var(--text-muted); font-size: 0.85rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .blog-post-full { max-width: 800px; margin: 0 auto; padding: 3rem 0; }
+    .blog-post-full h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-post-full .meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .blog-post-full .meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .blog-post-full p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .blog-post-full h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); margin: 2rem 0 1rem; }
+    .blog-post-full h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .blog-post-full ul, .blog-post-full ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+    .blog-post-full ul li, .blog-post-full ol li { color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    .blog-post-full pre { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: var(--radius-sm); overflow-x: auto; margin-bottom: 1.2rem; font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full code { font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full blockquote { border-left: 3px solid var(--accent); padding-left: 1.2rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-post-full img { width: 100%; border-radius: var(--radius-sm); margin: 1.5rem 0; }
+    .blog-nav-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-size: 0.9rem; margin-bottom: 2rem; transition: var(--transition); }
+    .blog-nav-back:hover { color: var(--accent); }
+  </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <nav class="nav" id="nav">
-    <a href="../index.html" class="logo">ABS</a>
-    <div class="nav-links" id="nav-links">
-      <a href="../index.html#home" class="nav-link">Home</a>
-      <a href="index.html" class="nav-link">Blog</a>
-      <a href="../index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html" class="logo"><i class="fas fa-terminal"></i> ABS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#research" class="nav-link">Research</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#freelance" class="nav-link">Freelance</a>
+      <a href="../index.html#activities" class="nav-link">Activities</a>
+      <a href="../index.html#awards" class="nav-link">Awards</a>
+      <a href="../index.html#resume" class="nav-link">Resume</a>
+      <a href="index.html" class="nav-link active">Blog</a>
+      <a href="../index.html#moments" class="nav-link">Moments</a>
+      <a href="../index.html#contact" class="nav-link nav-cta"><i class="fas fa-paper-plane"></i> Contact</a>
     </div>
-    <a href="../assets/resume.pdf" class="nav-cta" download>Download CV</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <main class="section theme-cream" style="padding-top: 8rem;">
-    <div class="container">
-      <p class="eyebrow">Research notes</p>
-      <h1 class="section-title">A beginner guide to research in computer science</h1>
-      <p class="section-subtitle">Answers to the most common questions CS students ask before starting research.</p>
-
-      <article class="longform">
-        <h2>1. Conference paper vs research paper vs review paper</h2>
-        <p>
-          A research paper presents original findings, methods, or analyses. It can be published
-          in a conference, a journal, or as a preprint.
-        </p>
-        <p>
-          A conference paper is a research paper presented at an academic conference. It is often
-          shorter, reviewed faster, and focuses on work-in-progress ideas. It can lead to an
-          extended journal version.
-        </p>
-        <p>
-          A review paper does not present new experiments. It summarizes, classifies, and analyzes
-          existing research on a specific topic and helps the community understand the state of the art.
-        </p>
-        <div class="callout">
-          Review papers can be published in conferences or journals, but you must check the call for papers.
-        </div>
-
-        <h2>2. How to find a research gap and decide if you need experiments</h2>
-        <h3>Finding a gap</h3>
-        <ul>
-          <li>Read recent papers and check the future work sections.</li>
-          <li>Compare approaches and spot missing settings like real-time or low-resource use.</li>
-          <li>Ask if you can improve accuracy, speed, scalability, or deployment.</li>
-          <li>Use Connected Papers, Litmaps, or Semantic Scholar to map related work.</li>
-        </ul>
-        <h3>Do I need experiments?</h3>
-        <ul>
-          <li>New algorithms usually need implementation and benchmarking.</li>
-          <li>Theory papers require proofs, but simulations can strengthen the work.</li>
-          <li>Systems and AI research almost always expect experiments.</li>
-        </ul>
-        <div class="callout">
-          Rule of thumb: for systems, AI, networking, or security, a practical evaluation is expected.
-        </div>
-
-        <h2>3. Lab or practical work as a CS student</h2>
-        <p>
-          Most CS research can be done on your laptop or free cloud platforms (Colab, Kaggle, GitHub
-          Codespaces). For large-scale training, use university clusters or student cloud credits.
-        </p>
-
-        <h2>4. Do I need to write a review paper before a research paper?</h2>
-        <p>
-          Not necessarily. Many researchers start directly with original work. A literature survey
-          helps you understand the field, spot gaps, and can become a publication if done well.
-        </p>
-        <div class="callout">
-          Beginner strategy: write a short survey, then refine it into a formal review if it is publishable.
-        </div>
-
-        <h2>5. How to use and cite data from others</h2>
-        <ul>
-          <li>Cite the original dataset or paper and mention how you accessed it.</li>
-          <li>If you reproduce a figure, state it is reproduced or adapted with citation.</li>
-          <li>Check licenses, especially for commercial use.</li>
-          <li>Never copy text without quotes and citation.</li>
-        </ul>
-
-        <h2>6. Where to publish - conference or journal?</h2>
-        <p>
-          In computer science, conferences often have higher visibility and faster publication cycles.
-          Workshops can be a good entry point for beginners.
-        </p>
-        <ul>
-          <li>Workshops: smaller, supportive, often co-located with major conferences.</li>
-          <li>Conferences: rigorous review and fast turnaround.</li>
-          <li>Journals: slower but allow more detailed coverage.</li>
-        </ul>
-        <div class="callout">
-          Beginner path: short paper to workshop, expand to conference, then extend to journal.
-        </div>
-
-        <h2>7. Getting help from seniors and teachers</h2>
-        <ul>
-          <li>Professors can guide direction, review drafts, and connect collaborators.</li>
-          <li>Senior students can help with setup, debugging, and writing style.</li>
-          <li>Show initiative by bringing a concrete idea or short literature review.</li>
-        </ul>
-
-        <h2>8. Inviting researchers from platforms like Google Scholar</h2>
-        <p>
-          You can reach out to potential collaborators respectfully. Read their work, keep the
-          message short, and explain what you can contribute.
-        </p>
-        <div class="callout">
-          Many collaborations start with a polite email. Be clear and patient.
-        </div>
-
-        <h2>9. A smart strategy for managing citations</h2>
-        <ol>
-          <li>Add papers to Zotero or Mendeley as soon as you read them.</li>
-          <li>Use Connected Papers to save related work early.</li>
-          <li>Use BibTeX or citation plugins while writing.</li>
-          <li>Keep a growing bibliography instead of waiting until the end.</li>
-        </ol>
-      </article>
+  <section class="blog-hero">
+    <div class="blog-hero-content">
+      <h1>The Untold AI Race</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> 2024</span>
+        <span><i class="fas fa-tag"></i> AI · DeepMind</span>
+        <span><i class="far fa-clock"></i> 5 min read</span>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <script src="../js/main.js"></script>
+  <section class="section">
+    <div class="container blog-post-full">
+      <a href="index.html" class="blog-nav-back"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+      <h1>The Untold AI Race</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> 2024</span>
+        <span><i class="fas fa-tag"></i> AI · DeepMind</span>
+        <span><i class="far fa-clock"></i> 5 min read</span>
+      </div>
+
+      <p>When we play chess, we must scan the entire board, anticipate our opponent's moves, and make calculated decisions before moving a single pawn. Imagine if this process were handled by software capable of autonomous decision-making; that would represent a breakthrough era for the technology world.</p>
+
+      <p>While many are just now noticing the AI boom, this revolution was pioneered years ago by Demis Hassabis and his company, DeepMind. Recognizing the potential of their vision early on, Google acquired DeepMind. This strategic move ensured that Google was not lagging behind in the AI race, but its pioneer.</p>
+
+      <h2>DeepMind's Journey Through Games</h2>
+
+      <h3>AlphaGo</h3>
+      <p>In 2016, DeepMind achieved a historic milestone by defeating Lee Sedol, one of the world's greatest Go players. This was considered AI's "Sputnik moment," proving that machines could handle "incomputable" complexity.</p>
+
+      <h3>AlphaZero</h3>
+      <p>This system took it a step further by learning Chess, Shogi, and Go from scratch. By playing against itself with no human input, it achieved super level proficiency in just a matter of hours.</p>
+
+      <h3>AlphaStar</h3>
+      <p>DeepMind then tackled StarCraft II, demonstrating that AI could handle continuous decision-making and "hidden information" in a way that mimicked human strategic thinking.</p>
+
+      <h2>The Scientific Revolution: AlphaFold</h2>
+      <p>The true "Scientific Revolution," however, came with AlphaFold. Since the 1960s, scientists have struggled to predict how amino acid sequences fold into 3D protein structures for understanding diseases and developing new medicines. AlphaFold effectively solved this 50-year-old problem, predicting structures in seconds that would have previously taken years of manual labor. Imagine that in the past, a student might have pursued a PhD just to discover a single protein structure!</p>
+
+      <h2>Nobel Prize Recognition</h2>
+      <p>In recognition of this monumental contribution to science, Demis Hassabis (along with John Jumper and David Baker) was awarded the Nobel Prize in Chemistry in 2024.</p>
+
+      <blockquote>
+        "The best way to predict the future is to invent it." — Alan Kay
+      </blockquote>
+
+      <p>The AI race is far from over, but DeepMind's journey from mastering games to solving fundamental scientific problems shows us just how transformative this technology can be.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><i class="fas fa-terminal"></i> ABS</div>
+          <p>Researcher · Developer · Freelancer · 中文 (HSK4)</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="../freelancing/freelancing.html">Web Development</a>
+          <a href="../freelancing/freelancing.html">AI & Automation</a>
+          <a href="../freelancing/freelancing.html">UI/UX Design</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Abu Bakar Siddique</span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--accent)"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>

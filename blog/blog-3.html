@@ -3,77 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consciousness is Fundamental | Abu Bakar Siddique</title>
+  <title>My Journey Learning Chinese (HSK4) · Blog</title>
+  <meta name="description" content="Tips, resources, and lessons from studying Chinese to HSK4 level while balancing tech work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-hero { min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; position: relative; overflow: hidden; background: var(--bg-2); }
+    .blog-hero-content { position: relative; z-index: 1; }
+    .blog-hero-content h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-hero-content .meta { color: var(--text-muted); font-size: 0.85rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .blog-post-full { max-width: 800px; margin: 0 auto; padding: 3rem 0; }
+    .blog-post-full h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-post-full .meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .blog-post-full .meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .blog-post-full p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .blog-post-full h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); margin: 2rem 0 1rem; }
+    .blog-post-full h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .blog-post-full ul, .blog-post-full ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+    .blog-post-full ul li, .blog-post-full ol li { color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    .blog-post-full pre { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: var(--radius-sm); overflow-x: auto; margin-bottom: 1.2rem; font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full code { font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full blockquote { border-left: 3px solid var(--accent); padding-left: 1.2rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-post-full img { width: 100%; border-radius: var(--radius-sm); margin: 1.5rem 0; }
+    .blog-nav-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-size: 0.9rem; margin-bottom: 2rem; transition: var(--transition); }
+    .blog-nav-back:hover { color: var(--accent); }
+  </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <nav class="nav" id="nav">
-    <a href="../index.html" class="logo">ABS</a>
-    <div class="nav-links" id="nav-links">
-      <a href="../index.html#home" class="nav-link">Home</a>
-      <a href="index.html" class="nav-link">Blog</a>
-      <a href="../index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html" class="logo"><i class="fas fa-terminal"></i> ABS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#research" class="nav-link">Research</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#freelance" class="nav-link">Freelance</a>
+      <a href="../index.html#activities" class="nav-link">Activities</a>
+      <a href="../index.html#awards" class="nav-link">Awards</a>
+      <a href="../index.html#resume" class="nav-link">Resume</a>
+      <a href="index.html" class="nav-link active">Blog</a>
+      <a href="../index.html#moments" class="nav-link">Moments</a>
+      <a href="../index.html#contact" class="nav-link nav-cta"><i class="fas fa-paper-plane"></i> Contact</a>
     </div>
-    <a href="../assets/resume.pdf" class="nav-cta" download>Download CV</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <main class="section theme-cream" style="padding-top: 8rem;">
-    <div class="container">
-      <p class="eyebrow">Consciousness</p>
-      <h1 class="section-title">Consciousness is Fundamental</h1>
-      <p class="section-subtitle">Federico Faggin argues consciousness is woven into reality, not produced by the brain.</p>
-
-      <article class="longform">
-        <p>
-          Federico Faggin, the designer of the Intel 4004 microprocessor, now explores the nature
-          of consciousness. His theory of Quantum Information Panpsychism argues that consciousness
-          is not a by-product of the brain but a foundational element of the universe.
-        </p>
-        <div class="callout">
-          In Faggin's view, our bodies are like sophisticated drones operated by a conscious quantum field.
-        </div>
-
-        <h2>The part-whole: cells vs microprocessors</h2>
-        <p>
-          Faggin draws a distinction between living cells and transistors. Cells are part-whole entities
-          that contain potential knowledge of the organism and communicate through quantum fields.
-        </p>
-        <p>
-          Microprocessors are classical machines that process bits deterministically with no inner awareness.
-          This leads him to challenge the purely materialist view of intelligence.
-        </p>
-
-        <h2>Free will and the collapse of the wave function</h2>
-        <p>
-          In quantum physics, the collapse of the wave function is when probabilities become a definite state.
-          Faggin sees this as the instant of free will - the universe making a choice.
-        </p>
-
-        <h2>Meaning, not just information</h2>
-        <p>
-          Meaning resides in consciousness, not in raw information. A book has symbols, but meaning appears
-          only when consciousness engages with it. This reframes the AI debate: data processing is not understanding.
-        </p>
-        <div class="callout">
-          The next frontier is understanding consciousness, not just building smarter machines.
-        </div>
-
-        <h2>Watch the full talk</h2>
-        <p>
-          If you want the full explanation, watch the talk here:
-          <a href="https://youtu.be/0FUFewGHLLg?si=CB4OCpHd3_Eu7eS1" target="_blank">Federico Faggin - Quantum Consciousness</a>
-        </p>
-        <p class="mono">Blog by Abu Bakar Siddique</p>
-      </article>
+  <section class="blog-hero">
+    <div class="blog-hero-content">
+      <h1>My Journey Learning Chinese (HSK4)</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> November 2025</span>
+        <span><i class="fas fa-tag"></i> Career · Language</span>
+        <span><i class="far fa-clock"></i> 7 min read</span>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <script src="../js/main.js"></script>
+  <section class="section">
+    <div class="container blog-post-full">
+      <a href="index.html" class="blog-nav-back"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+      <h1>My Journey Learning Chinese (HSK4)</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> November 2025</span>
+        <span><i class="fas fa-tag"></i> Career · Language</span>
+        <span><i class="far fa-clock"></i> 7 min read</span>
+      </div>
+
+      <p>Learning Chinese has been one of the most rewarding challenges of my life. From struggling with tones to passing the HSK4 exam, here's my journey and the lessons I've learned along the way.</p>
+
+      <h2>Why Chinese?</h2>
+      <p>As a tech professional, I've always been fascinated by China's rapid technological growth. Learning Chinese opened doors to:</p>
+      <ul>
+        <li>Collaborating with Chinese tech companies and researchers</li>
+        <li>Understanding Chinese tech documentation and resources</li>
+        <li>Building cross-cultural bridges in the global tech community</li>
+        <li>Exploring a rich culture and history firsthand</li>
+      </ul>
+
+      <h2>My Learning Timeline</h2>
+      <ul>
+        <li><strong>Year 1:</strong> Basics — Pinyin, tones, simple greetings, and 150 characters</li>
+        <li><strong>Year 2:</strong> HSK2 — Daily conversations, 300 characters, basic grammar</li>
+        <li><strong>Year 3:</strong> HSK3 — Reading short articles, writing paragraphs, 600 characters</li>
+        <li><strong>Year 4:</strong> HSK4 — News articles, complex conversations, 1200 characters</li>
+      </ul>
+
+      <h2>Resources That Helped Me</h2>
+      <h3>Apps</h3>
+      <ul>
+        <li><strong>Duolingo</strong> — Great for daily practice and building habits</li>
+        <li><strong>HelloChinese</strong> — Excellent for structured HSK preparation</li>
+        <li><strong>Pleco</strong> — The best Chinese dictionary app (a must-have!)</li>
+        <li><strong>Skritter</strong> — For learning to write characters</li>
+      </ul>
+
+      <h3>Books</h3>
+      <ul>
+        <li><strong>HSK Standard Course</strong> — Official textbooks for each level</li>
+        <li><strong>Integrated Chinese</strong> — Comprehensive grammar and vocabulary</li>
+        <li><strong>Chinese Breeze</strong> — Graded readers for extensive reading</li>
+      </ul>
+
+      <h3>Media</h3>
+      <ul>
+        <li><strong>ChinesePod</strong> — Podcasts for listening practice</li>
+        <li><strong>YouTube</strong> — Channels like "Yoyo Chinese" and "Mandarin Corner"</li>
+        <li><strong>TV Shows</strong> — Watching Chinese dramas with subtitles</li>
+      </ul>
+
+      <h2>Tips for Tech Professionals</h2>
+      <p>If you're in tech and learning Chinese, here are some strategies that worked for me:</p>
+      <ul>
+        <li><strong>Learn tech vocabulary early</strong> — Words like 编程 (programming), 算法 (algorithm), 人工智能 (AI)</li>
+        <li><strong>Read Chinese tech blogs</strong> — Sites like 知乎 (Zhihu) and 掘金 (Juejin)</li>
+        <li><strong>Join Chinese developer communities</strong> — WeChat groups, GitHub discussions</li>
+        <li><strong>Set realistic goals</strong> — 15-30 minutes daily is better than 3 hours once a week</li>
+      </ul>
+
+      <h2>Overcoming Challenges</h2>
+      <p>The biggest challenges I faced:</p>
+      <ul>
+        <li><strong>Tones</strong> — Practice with native speakers and use tone-marked texts</li>
+        <li><strong>Character memorization</strong> — Use spaced repetition (Anki) and write by hand</li>
+        <li><strong>Listening comprehension</strong> — Watch content at 0.75x speed initially</li>
+        <li><strong>Speaking confidence</strong> — Language exchange partners and italki tutors</li>
+      </ul>
+
+      <h2>What's Next?</h2>
+      <p>I'm currently working toward HSK5, which requires knowing 2500 characters. My goal is to reach fluency and be able to conduct technical presentations in Chinese.</p>
+
+      <blockquote>
+        "学习一门新的语言，就是拥有另一个灵魂。" — 查理曼大帝
+        (To have another language is to possess a second soul.)
+      </blockquote>
+
+      <p>If you're thinking about learning Chinese, start today. The journey is long, but every step is worth it. 加油！🚀</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><i class="fas fa-terminal"></i> ABS</div>
+          <p>Researcher · Developer · Freelancer · 中文 (HSK4)</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="../freelancing/freelancing.html">Web Development</a>
+          <a href="../freelancing/freelancing.html">AI & Automation</a>
+          <a href="../freelancing/freelancing.html">UI/UX Design</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Abu Bakar Siddique</span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--accent)"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>

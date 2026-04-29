@@ -3,75 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Untold AI Race | Abu Bakar Siddique</title>
+  <title>Federico Faggin & Quantum Information Panpsychism · Blog</title>
+  <meta name="description" content="The Intel 4004 designer's theory that consciousness is fundamental to the universe, not just a brain function." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-hero { min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; position: relative; overflow: hidden; background: var(--bg-2); }
+    .blog-hero-content { position: relative; z-index: 1; }
+    .blog-hero-content h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-hero-content .meta { color: var(--text-muted); font-size: 0.85rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .blog-post-full { max-width: 800px; margin: 0 auto; padding: 3rem 0; }
+    .blog-post-full h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-post-full .meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .blog-post-full .meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .blog-post-full p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .blog-post-full h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); margin: 2rem 0 1rem; }
+    .blog-post-full h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .blog-post-full ul, .blog-post-full ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+    .blog-post-full ul li, .blog-post-full ol li { color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    .blog-post-full pre { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: var(--radius-sm); overflow-x: auto; margin-bottom: 1.2rem; font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full code { font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full blockquote { border-left: 3px solid var(--accent); padding-left: 1.2rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-post-full img { width: 100%; border-radius: var(--radius-sm); margin: 1.5rem 0; }
+    .blog-nav-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-size: 0.9rem; margin-bottom: 2rem; transition: var(--transition); }
+    .blog-nav-back:hover { color: var(--accent); }
+  </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <nav class="nav" id="nav">
-    <a href="../index.html" class="logo">ABS</a>
-    <div class="nav-links" id="nav-links">
-      <a href="../index.html#home" class="nav-link">Home</a>
-      <a href="index.html" class="nav-link">Blog</a>
-      <a href="../index.html#contact" class="nav-link">Contact</a>
+    <a href="../index.html" class="logo"><i class="fas fa-terminal"></i> ABS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#research" class="nav-link">Research</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#freelance" class="nav-link">Freelance</a>
+      <a href="../index.html#activities" class="nav-link">Activities</a>
+      <a href="../index.html#awards" class="nav-link">Awards</a>
+      <a href="../index.html#resume" class="nav-link">Resume</a>
+      <a href="index.html" class="nav-link active">Blog</a>
+      <a href="../index.html#moments" class="nav-link">Moments</a>
+      <a href="../index.html#contact" class="nav-link nav-cta"><i class="fas fa-paper-plane"></i> Contact</a>
     </div>
-    <a href="../assets/resume.pdf" class="nav-cta" download>Download CV</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <main class="section theme-cream" style="padding-top: 8rem;">
-    <div class="container">
-      <p class="eyebrow">AI and discovery</p>
-      <h1 class="section-title">The Untold AI Race</h1>
-      <p class="section-subtitle">How DeepMind moved from games to AlphaFold and reshaped science.</p>
-
-      <article class="longform">
-        <p>
-          When we play chess, we scan the board, anticipate moves, and make calculated decisions
-          before even touching a pawn. Imagine that same process handled entirely by software.
-          This vision marked a breakthrough era for technology, and it began long before the current AI boom.
-        </p>
-        <p>
-          While the world is only now waking up to generative AI, the real revolution was pioneered by
-          Demis Hassabis and DeepMind. Google recognized the potential early and acquired DeepMind to stay ahead.
-        </p>
-
-        <h2>Mastering games: the proving grounds</h2>
-        <p>
-          DeepMind's journey started with complex games, each milestone proving that machines could
-          handle uncertainty, creativity, and long-term planning.
-        </p>
-        <p><strong>AlphaGo</strong> shocked the world in 2016 by defeating Lee Sedol, one of the greatest Go players.</p>
-        <p><strong>AlphaZero</strong> taught itself chess, shogi, and Go from scratch, discovering new strategies.</p>
-        <p><strong>AlphaStar</strong> showed that AI could handle real-time strategy under uncertainty.</p>
-
-        <h2>The scientific revolution: AlphaFold</h2>
-        <p>
-          The true masterpiece came when DeepMind turned to biology. For over 50 years, scientists
-          struggled with the protein-folding problem: predicting 3D protein structure from amino acid sequences.
-        </p>
-        <div class="callout">
-          A single PhD student used to spend years determining one protein structure. AlphaFold now predicts them in seconds.
-        </div>
-        <p>
-          AlphaFold effectively solved this grand challenge and democratized access to protein structures.
-        </p>
-        <p>
-          In recognition of this contribution, Demis Hassabis (with John Jumper and David Baker) received the
-          2024 Nobel Prize in Chemistry.
-        </p>
-        <div class="callout">
-          The game is not the goal. The game teaches us how to solve the hardest problems of science.
-        </div>
-        <p class="mono">Blog by Abu Bakar Siddique</p>
-      </article>
+  <section class="blog-hero">
+    <div class="blog-hero-content">
+      <h1>Federico Faggin & Quantum Information Panpsychism</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> 2024</span>
+        <span><i class="fas fa-tag"></i> Science · Consciousness</span>
+        <span><i class="far fa-clock"></i> 6 min read</span>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <script src="../js/main.js"></script>
+  <section class="section">
+    <div class="container blog-post-full">
+      <a href="index.html" class="blog-nav-back"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+      <h1>Federico Faggin & Quantum Information Panpsychism</h1>
+      <div class="meta">
+        <span><i class="far fa-calendar"></i> 2024</span>
+        <span><i class="fas fa-tag"></i> Science · Consciousness</span>
+        <span><i class="far fa-clock"></i> 6 min read</span>
+      </div>
+
+      <p>Federico Faggin, the designer of the Intel 4004 — the first single-chip CPU — and a pioneer in silicon technology, has presented his theory of Quantum Information Panpsychism, asserting that consciousness is fundamental to the universe, rather than just a brain function. He believes consciousness exists in a conscious quantum field, and our bodies are like "drones" operated by it.</p>
+
+      <h2>Challenging the Materialist View</h2>
+      <p>Faggin's personal experiences led him to challenge the materialist view, arguing that the current scientific paradigm, which sees humans as machines, is flawed and could lead to issues with powerful AI. He explained that every cell in our body is a "part-whole," containing the potential knowledge of the entire organism. He distinguishes between cells, which are "quantum-classical" entities connected by quantum fields, and microprocessors, which are purely classical.</p>
+
+      <h2>Quantum Information as Fundamental Reality</h2>
+      <p>He posits that quantum information is the fundamental reality and that free will is represented by the "collapse of the wave function" in quantum physics. Faggin also suggests that meaning resides within the conscious field, not in information itself.</p>
+
+      <h2>A New Postulate for Reality</h2>
+      <p>He proposes a new postulate for reality: the "totality of what exists" is dynamic, holistic, and "wants to know itself," implying consciousness and free will are foundational. He believes his theory is testable and could lead to a future where humanity better understands consciousness and fosters cooperation.</p>
+
+      <blockquote>
+        "In short, his theory can certainly be interpreted as an attempt to bridge the gap between the material and spiritual worlds."
+      </blockquote>
+
+      <p>For a deeper dive into Faggin's ideas, watch his full talk: <a href="https://youtu.be/0FUFewGHLLg?si=CB4OCpHd3_Eu7eS1" target="_blank" style="color:var(--accent)">https://youtu.be/0FUFewGHLLg</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><i class="fas fa-terminal"></i> ABS</div>
+          <p>Researcher · Developer · Freelancer · 中文 (HSK4)</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="../freelancing/freelancing.html">Web Development</a>
+          <a href="../freelancing/freelancing.html">AI & Automation</a>
+          <a href="../freelancing/freelancing.html">UI/UX Design</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Abu Bakar Siddique</span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--accent)"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('open'); });
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>

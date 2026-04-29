@@ -3,57 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Abu Bakar Siddique</title>
+  <title>Blog · Abu Bakar Siddique</title>
+  <meta name="description" content="Read articles on tech, AI, web development, and life by Abu Bakar Siddique." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; position: relative; overflow: hidden; }
+    .blog-hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .blog-hero-bg .blog-float-quote { position: absolute; font-size: 4rem; font-family: var(--font-display); color: var(--accent); opacity: 0.06; animation: blogFloat var(--dur) ease-in-out infinite; animation-delay: var(--delay); }
+    @keyframes blogFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.1); } }
+    .blog-hero-content { position: relative; z-index: 1; }
+    .blog-hero-content h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-hero-content p { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+    .blog-post-full { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .blog-post-full h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .blog-post-full .meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .blog-post-full .meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .blog-post-full p { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .blog-post-full h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); margin: 2rem 0 1rem; }
+    .blog-post-full h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+    .blog-post-full ul, .blog-post-full ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+    .blog-post-full ul li, .blog-post-full ol li { color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    .blog-post-full pre { background: var(--primary); color: #fff; padding: 1.2rem; border-radius: var(--radius-sm); overflow-x: auto; margin-bottom: 1.2rem; font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full code { font-family: var(--font-mono); font-size: 0.85rem; }
+    .blog-post-full blockquote { border-left: 3px solid var(--accent); padding-left: 1.2rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-post-full img { width: 100%; border-radius: var(--radius-sm); margin: 1.5rem 0; }
+    .blog-nav-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-size: 0.9rem; margin-bottom: 2rem; transition: var(--transition); }
+    .blog-nav-back:hover { color: var(--accent); }
+  </style>
 </head>
 <body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
   <nav class="nav" id="nav">
-    <a href="../index.html" class="logo">ABS</a>
-    <div class="nav-links" id="nav-links">
-      <a href="../index.html#home" class="nav-link">Home</a>
+    <a href="../index.html" class="logo"><i class="fas fa-terminal"></i> ABS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#research" class="nav-link">Research</a>
       <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#freelance" class="nav-link">Freelance</a>
+      <a href="../index.html#activities" class="nav-link">Activities</a>
+      <a href="../index.html#awards" class="nav-link">Awards</a>
       <a href="../index.html#resume" class="nav-link">Resume</a>
-      <a href="../index.html#contact" class="nav-link">Contact</a>
+      <a href="../index.html#blog" class="nav-link active">Blog</a>
+      <a href="../index.html#moments" class="nav-link">Moments</a>
+      <a href="../index.html#contact" class="nav-link nav-cta"><i class="fas fa-paper-plane"></i> Contact</a>
     </div>
-    <a href="../assets/resume.pdf" class="nav-cta" download>Download CV</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <main class="section theme-cream" style="padding-top: 8rem;">
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="blog-hero-bg" id="blogHeroBg"></div>
+    <div class="blog-hero-content">
+      <h1>📝 Blog</h1>
+      <p>Thoughts on tech, AI, web development, and life experiences.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="section">
     <div class="container">
-      <p class="eyebrow">Blog and notes</p>
-      <h1 class="section-title">Writing and case studies</h1>
       <div class="cards-grid">
-        <article class="card is-clickable">
-          <a class="card-link" href="blog-1.html" aria-label="Read: Beginner guide to CS research"></a>
-          <div class="card-body">
-            <h3>Beginner guide to CS research</h3>
-            <p>Practical answers to the questions new researchers ask most.</p>
-          </div>
-        </article>
-        <article class="card is-clickable">
-          <a class="card-link" href="blog-2.html" aria-label="Read: The Untold AI Race"></a>
+        <div class="card is-clickable fade-in">
+          <a href="blog-1.html" class="card-link"></a>
+          <div class="card-top"><span class="chip">AI</span><span class="chip ghost">2024</span></div>
           <div class="card-body">
             <h3>The Untold AI Race</h3>
-            <p>DeepMind, AlphaFold, and the race that reshaped AI.</p>
+            <p>From AlphaGo to AlphaFold — how DeepMind pioneered the AI revolution and solved a 50-year-old scientific problem.</p>
+            <span class="link"><i class="fas fa-arrow-right"></i> Read More</span>
           </div>
-        </article>
-        <article class="card is-clickable">
-          <a class="card-link" href="blog-3.html" aria-label="Read: Consciousness is Fundamental"></a>
+        </div>
+        <div class="card is-clickable fade-in">
+          <a href="blog-2.html" class="card-link"></a>
+          <div class="card-top"><span class="chip">Science</span><span class="chip ghost">2024</span></div>
           <div class="card-body">
-            <h3>Consciousness is Fundamental</h3>
-            <p>Reflections on Federico Faggin and quantum consciousness.</p>
+            <h3>Federico Faggin & Quantum Information Panpsychism</h3>
+            <p>The Intel 4004 designer's theory that consciousness is fundamental to the universe, not just a brain function.</p>
+            <span class="link"><i class="fas fa-arrow-right"></i> Read More</span>
           </div>
-        </article>
+        </div>
+        <div class="card is-clickable fade-in">
+          <a href="blog-3.html" class="card-link"></a>
+          <div class="card-top"><span class="chip">Career</span><span class="chip ghost">Nov 2025</span></div>
+          <div class="card-body">
+            <h3>My Journey Learning Chinese (HSK4)</h3>
+            <p>Tips, resources, and lessons from studying Chinese to HSK4 level while balancing tech work.</p>
+            <span class="link"><i class="fas fa-arrow-right"></i> Read More</span>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <script src="../js/main.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo"><i class="fas fa-terminal"></i> ABS</div>
+          <p>Researcher · Developer · Freelancer · 中文 (HSK4)</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#blog">Blog</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="../freelancing/freelancing.html">Web Development</a>
+          <a href="../freelancing/freelancing.html">AI & Automation</a>
+          <a href="../freelancing/freelancing.html">UI/UX Design</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Abu Bakar Siddique</span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--accent)"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Scroll progress
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+
+    // Nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+
+    // Back to top
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Blog hero floating quotes
+    const heroBg = document.getElementById('blogHeroBg');
+    if (heroBg) {
+      const quotes = ['"', '"', '"', '"', '❝', '❞', '“', '”', '«', '»'];
+      for (let i = 0; i < 12; i++) {
+        const span = document.createElement('span');
+        span.className = 'blog-float-quote';
+        span.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+        span.style.left = Math.random() * 100 + '%';
+        span.style.top = Math.random() * 100 + '%';
+        span.style.setProperty('--dur', (Math.random() * 8 + 5) + 's');
+        span.style.setProperty('--delay', (Math.random() * 4) + 's');
+        heroBg.appendChild(span);
+      }
+    }
+  </script>
 </body>
 </html>
